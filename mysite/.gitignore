@@ -1,0 +1,25 @@
+.idea
+__pycache__
+.conf/
+.logs/
+media/
+venv/
+media_hidden/
+node_modules/
+.sass-cache/
+static_collected/
+dist/
+
+.DS_Store
+# .pylintrc
+# *-bundle.js
+*.sqlite3
+*.suo
+*.ntvs*
+*.njsproj
+*.mo
+webpack-stats.json
+npm-debug.log
+yarn-error.log
+package-lock.json
+owners.xlsx
