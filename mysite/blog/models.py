@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 
 from auth_user.models import User
@@ -22,6 +23,9 @@ class Post(models.Model):
     status = models.CharField(max_length=10,
                               choices=STATUS_CHOICES,
                               default='draft')
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.pk)])
 
     class Meta:
         ordering = ('-publish',)

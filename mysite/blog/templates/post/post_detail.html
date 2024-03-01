@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <article class="post">
+        <header>
+            <h1>{{ post.title }}</h1>
+            <p class="meta">Published by {{ post.author.username }} on {{ post.publish }}</p>
+        </header>
+        <div class="post-content">
+            {{ post.body | safe }}
+        </div>
+    </article>
+{% endblock %}
